@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(192, 130, 193) !important;
+}
+
+.container {
+    min-height: 100vh;
+    background-color: rgb(192, 130, 193) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-card {
+    width: 30rem;
+}
+
+.quizAnswerCard:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.05);
+}
+
+.image {
+    max-height: 175px;
+    object-fit: cover;
+}
+
+.question-footer {
+    border-top: 1px solid rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+}
