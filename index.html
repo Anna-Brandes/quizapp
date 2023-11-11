@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quizapp</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <!--bootstrap files-->
@@ -18,8 +18,21 @@
       </nav>
     <div class="container">
       <div class="card quiz-card">
-        <img src="img/question-mark.jpg" class="card-img-top image" alt="...">
-        <div class="card-body">
+        <img src="img/question-mark.jpg" id="headerImg" class="card-img-top image" alt="...">
+
+        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar" id="progress-bar" style="width: 25%">25%</div>
+        </div>
+
+        <div class="card-body" id="endScreen" style="display: none">
+         <div class="text-center">Geschafft</div> 
+        
+
+         <div class="text-center">Du hast <b id="rightQuestions" class="endCard"> X </b> von <b class="endCard" id="totalAnswers"> X </b> Fragen richtig </div>
+         <div class="reset"><button class="btn btn-success" id="resetButton" onclick="restartGame()">Reset</button></div>
+        </div>
+
+        <div class="card-body" id="quizBody">
           <h5 class="card-title" id="questiontext">Frage</h5>
 
           <div class="card quizAnswerCard mb-2" onclick="answer('answer_1')">
@@ -49,9 +62,9 @@
 
           <div class="question-footer">
            <span>
-            <b>1</b> von <b id="allQuestions">5</b> Fragen
+            <b id="questionNumber">1</b> von <b id="allQuestions">6</b> Fragen
            </span>
-            <button class="btn btn-success">Nächste Frage</button>
+            <button class="btn btn-success" disabled id="nextButton" onclick="nextQuestion()">Nächste Frage</button>
 
           </div>
 

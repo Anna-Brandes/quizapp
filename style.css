@@ -19,6 +19,10 @@ body{
     background-color: rgba(0,0,0,0.05);
 }
 
+.bg-success, .bg-danger {
+    color: white;
+}
+
 .image {
     max-height: 175px;
     object-fit: cover;
@@ -30,4 +34,27 @@ body{
     justify-content: space-between;
     align-items: center;
     padding-top: 12px;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.text-center {
+    display: flex;
+    justify-content: center;
+}
+
+.reset{
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.endCard {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+    margin-right: 5px;
+
 }
